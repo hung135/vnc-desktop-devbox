@@ -3,9 +3,15 @@ services:
   vnc:
     build: . 
     ports:
-      - "6080:80"  
+      #- "6080:80"  
       - "6081:443"
-        #environment:
+    environment:
+      - SSL_PORT=443
+        #webrowser password
+      - HTTP_PASSWORD=abc123
+      - USER=hung
+        # linux password
+      - PASSWORD=password 
         #- NOVNC_SSL_CERT=/etc/ssl/novnc.crt
         #- NOVNC_SSL_KEY=/etc/ssl/novnc.key
         #volumes:
