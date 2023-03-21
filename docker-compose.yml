@@ -1,0 +1,14 @@
+version: '3'
+services:
+  vnc:
+    build: . 
+    ports:
+      - "6080:80"  
+      - "6081:443"
+        #environment:
+        #- NOVNC_SSL_CERT=/etc/ssl/novnc.crt
+        #- NOVNC_SSL_KEY=/etc/ssl/novnc.key
+        #volumes:
+        #- /path/to/ssl/cert:/etc/ssl/novnc.crt
+        #- /path/to/ssl/key:/etc/ssl/novnc.key
+
